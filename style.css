@@ -1,0 +1,41 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F5FC;
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    position: fixed;
+    top:2%;
+    left: 2%;
+}
+
+.result-bar{
+    float: right;
+    width: 400px;
+    height: 900px;
+    background-color: #FFFFFF;
+    margin-top: 1.5%;
+    margin-right: 2%;
+    border-radius: 32px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-bar img{
+    margin-bottom: 20px;
+}
+
+.result-bar strong{
+    font-size: 24px;
+}
+
+.result-bar p{
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
