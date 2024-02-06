@@ -5,29 +5,37 @@
     <title>Encriptador</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<header>
+    <img src="imgs/Logo.png" alt="logo" class="logo">
+</header>
+
 <body>
 
-<img src="imgs/Logo.png" alt="logo" class="logo">
+<main>
+    <div class="input-bar">
+        <textarea placeholder="Ingrese el texto aquí"></textarea>
 
-<div class="input-bar">
-    <textarea placeholder="Ingrese el texto aquí"></textarea>
-
-    <div class="warning">
-        <img src="imgs/Warning.png" alt="warning">
-        <p>Apenas letras minúsculas y sin acento</p>
+        <div class="warning">
+            <img src="imgs/Warning.png" alt="warning">
+            <p>Apenas letras minúsculas y sin acento</p>
+        </div>
+        <div class="buttons">
+            <button class="encrypt">Encriptar</button>
+            <button class="decrypt">Desencriptar</button>
+        </div>
     </div>
-    <div class="buttons">
-        <button class="encrypt">Encriptar</button>
-        <button class="decrypt">Desencriptar</button>
-    </div>
-</div>
 
-<div class="result-bar">
-    <img src="imgs/Muñeco.png" alt="wait-text">
-    <strong>Ningún mensaje fue</strong>
-    <strong>encontrado</strong>
-    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-</div>
+    <div class="result-bar">
+        <img src="imgs/Muñeco.png" alt="wait-text">
+        <strong>Ningún mensaje fue</strong>
+        <strong>encontrado</strong>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+    </div>
+</main>
+
+
+</body>
 
 <footer>
     <div>
@@ -39,7 +47,7 @@
         <ul>
             <li>
                 <a href="mailto:b99ronal@gmail.com">
-                    <img src="imgs/gmail-02.png" alt="gmail" id="gm">
+                    <img src="imgs/icons8-email-50.png" alt="gmail" id="gm">
                 </a>
             </li>
             <li>
@@ -56,5 +64,4 @@
 
     </div>
 </footer>
-</body>
 </html>
