@@ -21,16 +21,25 @@
             <p>Apenas letras minúsculas y sin acento</p>
         </div>
         <div class="buttons">
-            <button class="encrypt">Encriptar</button>
-            <button class="decrypt">Desencriptar</button>
+            <button class="encrypt" onclick="ocultarContenidoResultBar()">Encriptar</button>
+            <button class="decrypt" onclick="ocultarContenidoResultBar()">Desencriptar</button>
         </div>
     </div>
 
     <div class="result-bar">
-        <img src="imgs/Muñeco.png" alt="wait-text">
-        <strong>Ningún mensaje fue</strong>
-        <strong>encontrado</strong>
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <div class="img-text">
+            <img src="imgs/Muñeco.png" alt="wait-text">
+            <strong>Ningún mensaje fue</strong>
+            <strong>encontrado</strong>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+
+        <div class="result-text">
+            <textarea></textarea>
+            <button>
+                Copiar
+            </button>
+        </div>
     </div>
 </main>
 
@@ -64,4 +73,7 @@
 
     </div>
 </footer>
+
+<script src="script.js"></script>
+
 </html>
