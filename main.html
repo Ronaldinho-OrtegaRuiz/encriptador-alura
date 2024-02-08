@@ -14,28 +14,28 @@
 
 <main>
     <div class="input-bar">
-        <textarea placeholder="Ingrese el texto aquí"></textarea>
+        <textarea placeholder="Ingrese el texto aquí" id="user-text"></textarea>
 
         <div class="warning">
             <img src="imgs/Warning.png" alt="warning">
             <p>Apenas letras minúsculas y sin acento</p>
         </div>
         <div class="buttons">
-            <button class="encrypt" onclick="ocultarContenidoResultBar()">Encriptar</button>
-            <button class="decrypt" onclick="ocultarContenidoResultBar()">Desencriptar</button>
+            <button id="encrypt-btn" onclick="">Encriptar</button>
+            <button id="decrypt-btn" onclick="">Desencriptar</button>
         </div>
     </div>
 
     <div class="result-bar">
         <div class="img-text">
             <img src="imgs/Muñeco.png" alt="wait-text">
-            <strong>Ningún mensaje fue</strong>
+            <strong id="msg">Ningún mensaje fue</strong>
             <strong>encontrado</strong>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
 
-        <div class="result-text">
-            <textarea></textarea>
+        <div class="result-content">
+            <textarea disabled id="result-text"></textarea>
             <button>
                 Copiar
             </button>

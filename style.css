@@ -37,6 +37,7 @@ main {
     background-color: transparent;
     border: none;
     outline: none;
+    resize: none;
     font-size: 32px;
     color: #0A3871
 }
@@ -100,7 +101,7 @@ main {
     text-align: center;
 }
 
-.img-text{
+.img-text {
     width: 100%;
     height: 100%;
     display: flex;
@@ -119,7 +120,7 @@ main {
     font-size: 28px;
 }
 
-.result-text {
+.result-content {
     width: 100%;
     height: 100%;
     display: none;
@@ -128,17 +129,18 @@ main {
     justify-content: center;
 }
 
-.result-text textarea{
+.result-content textarea {
     width: 90%;
-    height: 72%;
+    height: 80%;
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 18px;
+    resize: none;
+    font-size: 24px;
     color: #0A3871;
 }
 
-.result-text button{
+.result-content button {
     width: 90%;
     height: 10%;
     background-color: transparent;
@@ -191,7 +193,7 @@ footer ul li img {
         flex-direction: column;
     }
 
-    .buttons{
+    .buttons {
         flex-direction: column;
         width: 100%;
     }
@@ -219,11 +221,31 @@ footer ul li img {
         display: none;
     }
 
-    footer{
+    .result-content {
+        height: min-content;
+    }
+
+    .result-content textarea {
+        width: 90%;
+        height: 80%;
+        margin-top: 10px;
+    }
+
+    .result-content textarea::-webkit-scrollbar{
+        display: none;
+    }
+
+    .result-content button {
+        width: 60%;
+        height: 50%;
+        margin-top: 10px;
+    }
+
+    footer {
         flex-direction: column;
     }
 
-    footer ul{
+    footer ul {
         margin-right: 20%;
     }
 }
