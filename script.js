@@ -4,6 +4,8 @@ const user_text = document.getElementById('user-text');
 const result_text = document.getElementById('result-text');
 const encrypt_btn = document.getElementById('encrypt-btn');
 const decrypt_btn = document.getElementById('decrypt-btn');
+const copy_btn = document.getElementById('copy-btn');
+const copy_msg = document.getElementById('copy-msg');
 const msg = document.getElementById('msg');
 
 
@@ -17,6 +19,10 @@ decrypt_btn.addEventListener('click', function(){
     let text = user_text.value.trim();
     validarTexto(text);
     result_text.value = desencriptar(text);
+});
+
+copy_btn.addEventListener('click', function(){
+    copiarTexto(result_text.value);
 });
 
 function validarTexto(text) {
@@ -78,4 +84,12 @@ function desencriptar(texto) {
         textoDesencriptado = textoDesencriptado.replace(regex, llavesDesencriptacion[llave]);
     }
     return textoDesencriptado;
+}
+
+function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto).then(function() {
+        copy_msg.innerText = 'El texto fue copiado';
+    }, function() {
+        copy_msg.innerText = 'Error al copiar';
+    });
 }

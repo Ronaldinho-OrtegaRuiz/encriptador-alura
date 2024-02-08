@@ -138,6 +138,7 @@ main {
     resize: none;
     font-size: 24px;
     color: #0A3871;
+    margin-top: 5%;
 }
 
 .result-content button {
@@ -150,7 +151,17 @@ main {
     border-radius: 32px;
     cursor: pointer;
     margin-top: 10px;
+}
 
+.result-content button:hover {
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+.result-content p{
+    color: #0A3871;
+    font-size: 18px;
+    text-align: center;
 }
 
 footer {
