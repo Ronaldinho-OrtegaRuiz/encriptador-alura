@@ -10,18 +10,20 @@ const msg = document.getElementById('msg');
 encrypt_btn.addEventListener('click', function(){
     let text = user_text.value.trim();
     validarTexto(text);
+    result_text.value = encriptar(text);
 });
 
 decrypt_btn.addEventListener('click', function(){
     let text = user_text.value.trim();
     validarTexto(text);
+    result_text.value = desencriptar(text);
 });
 
 function validarTexto(text) {
     if(text === '' || text === null || text === undefined) {
         ocultarResultado();
         msg.innerText = 'Ningún mensaje fue';
-    }else if(/^[a-z]*$/i.test(text)) {
+    }else if(/^[a-z\s]*$/i.test(text)) {
         mostrarResultado();
     }else{
         ocultarResultado();
@@ -32,11 +34,48 @@ function validarTexto(text) {
 function mostrarResultado(){
     resultContent[0].style.display = 'flex';
     contentImg[0].style.display = 'none';
-    result_text.value = user_text.value;
 }
 
 function ocultarResultado(){
     resultContent[0].style.display = 'none';
     contentImg[0].style.display = 'flex';
     msg.innerText = '';
+}
+
+var llavesEncriptacion = {
+    "e": "enter",
+    "i": "imes",
+    "a": "ai",
+    "o": "ober",
+    "u": "ufat"
+};
+
+function encriptar(texto) {
+    var textoEncriptado = "";
+    for (var i = 0; i < texto.length; i++) {
+        var letra = texto[i];
+        if (llavesEncriptacion.hasOwnProperty(letra)) {
+            textoEncriptado += llavesEncriptacion[letra];
+        } else {
+            textoEncriptado += letra;
+        }
+    }
+    return textoEncriptado;
+}
+
+var llavesDesencriptacion = {
+    "enter": "e",
+    "imes": "i",
+    "ai": "a",
+    "ober": "o",
+    "ufat": "u"
+};
+
+function desencriptar(texto) {
+    var textoDesencriptado = texto;
+    for (var llave in llavesDesencriptacion) {
+        var regex = new RegExp(llave, "g");
+        textoDesencriptado = textoDesencriptado.replace(regex, llavesDesencriptacion[llave]);
+    }
+    return textoDesencriptado;
 }
