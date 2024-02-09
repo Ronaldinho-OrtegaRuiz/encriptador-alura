@@ -31,7 +31,7 @@ function validarTexto(text) {
     if(text === '' || text === null || text === undefined) {
         ocultarResultado();
         msg.innerText = 'Ningún mensaje fue';
-    }else if(/^[a-z\s]*$/i.test(text)) {
+    }else if(/^[a-z\s]*$/.test(text)) {
         mostrarResultado();
     }else{
         ocultarResultado();
