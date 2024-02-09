@@ -129,16 +129,15 @@ main {
     justify-content: center;
 }
 
-.result-content textarea {
+.result-content div {
     width: 90%;
     height: 80%;
     background-color: transparent;
     border: none;
     outline: none;
-    resize: none;
-    font-size: 24px;
     color: #0A3871;
     margin-top: 5%;
+    overflow: auto;
 }
 
 .result-content button {
@@ -160,8 +159,8 @@ main {
 
 .result-content p{
     color: #0A3871;
-    font-size: 18px;
-    text-align: center;
+    font-size: 28px;
+    word-wrap: break-word;
 }
 
 footer {
@@ -222,7 +221,7 @@ footer ul li img {
 
     .result-bar {
         width: 85%;
-        height: 200px;
+        height: min-content;
         margin-top: 100px;
         margin-left: 5%;
         padding-top: 10px;
@@ -236,20 +235,20 @@ footer ul li img {
         height: min-content;
     }
 
-    .result-content textarea {
+    .result-content div {
         width: 90%;
-        height: 80%;
+        height: min-content;
         margin-top: 10px;
-    }
-
-    .result-content textarea::-webkit-scrollbar{
-        display: none;
     }
 
     .result-content button {
         width: 60%;
-        height: 50%;
+        height: 70px;
         margin-top: 10px;
+    }
+
+    .result-content p {
+        font-size: 24px;
     }
 
     footer {

@@ -12,17 +12,19 @@ const msg = document.getElementById('msg');
 encrypt_btn.addEventListener('click', function(){
     let text = user_text.value.trim();
     validarTexto(text);
-    result_text.value = encriptar(text);
+    result_text.innerText = encriptar(text);
+    copy_msg.innerText = '';
 });
 
 decrypt_btn.addEventListener('click', function(){
     let text = user_text.value.trim();
     validarTexto(text);
-    result_text.value = desencriptar(text);
+    result_text.innerText = desencriptar(text);
+    copy_msg.innerText = '';
 });
 
 copy_btn.addEventListener('click', function(){
-    copiarTexto(result_text.value);
+    copiarTexto(result_text.innerText);
 });
 
 function validarTexto(text) {
